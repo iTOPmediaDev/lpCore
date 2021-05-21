@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
-	<!-- ******************* The Navbar Area ******************* -->
+<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
