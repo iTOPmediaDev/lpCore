@@ -224,7 +224,14 @@ gulp.task('copy-assets', function(done) {
 	gulp
 		.src(`${paths.node}undescores-for-npm/js/skip-link-focus-fix.js`)
 		.pipe(gulp.dest(`${paths.dev}/js`));
-
+	// AnimXYZ
+	gulp
+		.src(`${paths.node}@animxyz/core/src/*.scss`)
+		.pipe(gulp.dest(`${paths.dev}/sass/AnimXYZ`));
+	//  ScrollOut
+	gulp
+		.src(`${paths.node}scroll-out/dist/scroll-out.min.js`)
+		.pipe(gulp.dest(`${paths.dev}/js/scrollout`));
 	done();
 });
 
@@ -240,6 +247,8 @@ gulp.task('clean-vendor-assets', function() {
 		`${paths.js}/**/skip-link-focus-fix.js`,
 		`${paths.js}/**/popper.min.js`,
 		`${paths.js}/**/popper.js`,
+		`${paths.js}/sass/AnimXYZ/*.scss`,
+		`${paths.js}/js/scrollout/scroll-out.min.js`,
 		paths.vendor !== '' ? paths.js + paths.vendor + '/**' : ''
 	]);
 });
